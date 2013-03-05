@@ -1,0 +1,17 @@
+<h1>Listing students</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for student in @students %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= link_to "Show", [:admin, student] %></td>
+      <td><%= link_to "Edit", edit_admin_student_path(student) %></td>
+      <td><%= link_to "Destroy", [:admin, student], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Student", new_admin_student_path %></p>

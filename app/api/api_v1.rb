@@ -12,4 +12,16 @@ class API_v1 < Grape::API
       raise "Unexpected error."
     end
   end
+
+  resource :students do
+    desc "List students."
+    get do
+      { "students" => Student.all }
+    end
+
+    desc "Raises an exception."
+    get :raise do
+      raise "Unexpected error."
+    end
+  end
 end

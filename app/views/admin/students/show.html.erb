@@ -1,0 +1,12 @@
+<h1>Student</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_student_path(@student) %> |
+  <%= link_to "Destroy", [:admin, @student], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_students_path %>
+</p>

@@ -6,6 +6,7 @@ gem 'pg'
 
 gem "grape", "~> 0.3.2"
 
+gem "nifty-generators"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -35,3 +36,5 @@ gem 'jquery-rails'
 
 # To use debugger
 gem 'debugger'
+
+gem "mocha", :group => :test

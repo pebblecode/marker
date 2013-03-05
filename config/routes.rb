@@ -6,6 +6,7 @@ Marker::Application.routes.draw do
 
   namespace :admin do
     resources :assessments
+    resources :students
   end
 
   root :to => 'home#index'
