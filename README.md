@@ -12,4 +12,4 @@ To set up
 
 To run
 
-    bundle exec rake server
+    bundle exec rails s
