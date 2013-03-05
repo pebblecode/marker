@@ -1,9 +1,9 @@
-require_relative "../app/api/marker"
+# require_relative "../app/api/marker"
 
 Marker::Application.routes.draw do
   # resources :assessments
 
-  mount Marker::API => '/'
+  mount API => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,7 +54,7 @@ Marker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'home#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

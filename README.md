@@ -14,6 +14,10 @@ To run
 
     bundle exec rails s
 
+Example route
+
+    http://localhost:4000/assessments
+
 ## Production
 
 The Marker API is deployed to heroku at: http://marker-api.herokuapp.com/
