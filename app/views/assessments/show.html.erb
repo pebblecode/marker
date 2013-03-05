@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @assessment.name %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @assessment.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+<%= link_to 'Back', assessments_path %>
