@@ -6,7 +6,6 @@ class Admin::AssessmentsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @assessments }
     end
   end
 
@@ -17,7 +16,6 @@ class Admin::AssessmentsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @assessment }
     end
   end
 
@@ -28,7 +26,6 @@ class Admin::AssessmentsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @assessment }
     end
   end
 
@@ -44,11 +41,9 @@ class Admin::AssessmentsController < ApplicationController
 
     respond_to do |format|
       if @assessment.save
-        format.html { redirect_to @assessment, notice: 'Assessment was successfully created.' }
-        format.json { render json: @assessment, status: :created, location: @assessment }
+        format.html { redirect_to [:admin, @assessment], notice: 'Assessment was successfully created.' }
       else
         format.html { render action: "new" }
-        format.json { render json: @assessment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +55,9 @@ class Admin::AssessmentsController < ApplicationController
 
     respond_to do |format|
       if @assessment.update_attributes(params[:assessment])
-        format.html { redirect_to @assessment, notice: 'Assessment was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to [:admin, @assessment], notice: 'Assessment was successfully updated.' }
       else
         format.html { render action: "edit" }
-        format.json { render json: @assessment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -76,8 +69,7 @@ class Admin::AssessmentsController < ApplicationController
     @assessment.destroy
 
     respond_to do |format|
-      format.html { redirect_to assessments_url }
-      format.json { head :no_content }
+      format.html { redirect_to admin_assessments_url }
     end
   end
 end

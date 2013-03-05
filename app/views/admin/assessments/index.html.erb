@@ -13,13 +13,13 @@
   <tr>
     <td><%= assessment.name %></td>
     <td><%= assessment.total %></td>
-    <td><%= link_to 'Show', assessment %></td>
-    <td><%= link_to 'Edit', edit_assessment_path(assessment) %></td>
-    <td><%= link_to 'Destroy', assessment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', [:admin, assessment] %></td>
+    <td><%= link_to 'Edit', edit_admin_assessment_path(assessment) %></td>
+    <td><%= link_to 'Destroy', [:admin, assessment], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Assessment', new_assessment_path %>
+<%= link_to 'New Assessment', new_admin_assessment_path %>

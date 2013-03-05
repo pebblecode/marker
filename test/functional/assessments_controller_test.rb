@@ -44,6 +44,6 @@ class AssessmentsControllerTest < ActionController::TestCase
       delete :destroy, id: @assessment
     end
 
-    assert_redirected_to assessments_path
+    assert_redirected_to admin_assessments_path
   end
 end
