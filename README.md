@@ -13,3 +13,12 @@ To set up
 To run
 
     bundle exec rails s
+
+## Production
+
+The Marker API is deployed to heroku at: http://marker-api.herokuapp.com/
+
+To deploy
+
+    # Add git@heroku.com:marker-api.git as a remote directory, then:
+    git push heroku master
